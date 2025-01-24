@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (navigator.share) {
                 try {
                     await navigator.share({
-                        title: "Mrudhgandh PoolVilla - Digital Guidebook",
+                        title: "Stonefield Farms - Digital Guidebook",
                         text: 'Check out this amazing property!',
                         url: window.location.href
                     });
