@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Field Farms</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGMBDY796D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FGMBDY796D');
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="assets/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta property="og:image" content="assets/favicon.jpg" />
+    <meta property="og:title" content="Stone Field Farms" />
+    <meta property="og:description" content="Spread over 1.5 Acre, this 3-bedroom hidden gem with a swimming pool, is located in Alipur, outskirts of New Delhi." />
+    <meta name="description" content="Spread over 1.5 Acre, this 3-bedroom hidden gem with a swimming pool, is located in Alipur, outskirts of New Delhi.">
+    <link rel="stylesheet" href="css/modal-updates.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero-image">
+            <a href="https://www.instagram.com/stonefieldfarm/" target="_blank" class="instagram-follow-btn">
+                <i class="fab fa-instagram"></i>
+                <span>Follow Stone Field Farms</span>
+            </a>
+            <img src="assets/heroimage.jpg" alt="Stone Field Farms" loading="eager">
+        </div>
+        <header>
+            <h1>Stone Field Farms</h1>
+            <p class="tagline">
+                Alipur, New Delhi
+            </p>
+            <p class="sub-tagline">
+                Spread over 1.5 Acre, this 3-bedroom hidden gem with a swimming pool, is located in Alipur, outskirts of New Delhi.
+            </p>
+        </header>
+
+        <div class="quick-access-grid">
+            <div class="grid-item" id="nearby-btn">
+                <div class="icon-wrapper">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <h3>Location</h3>
+            </div>
+            <div class="grid-item" id="reviews-btn">
+                <div class="icon-wrapper">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Reviews</h3>
+            </div>
+            <div class="grid-item" id="rules-btn">
+                <div class="icon-wrapper">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <h3>Wifi &<br>Rules</h3>
+            </div>
+            <div class="grid-item" id="emergency-btn">
+                <div class="icon-wrapper">
+                    <i class="fas fa-phone-volume"></i>
+                </div>
+                <h3>Emergency<br>Contact</h3>
+            </div>
+            
+            <div class="grid-item" id="specials-btn">
+                <div class="icon-wrapper">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3>Things<br>To Do</h3>
+            </div>
+            <div class="grid-item" id="book-now-btn">
+                <div class="icon-wrapper">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Book<br>Now</h3>
+            </div>
+        </div>
+
+        <section class="featured-sections">
+            <div class="feature-card" id="amenities-card">
+                <img src="assets/amenities.jpg" 
+                     alt="Amenities" 
+                     width="130" 
+                     height="85"
+                     loading="lazy"
+                     decoding="async">
+                <div class="card-content">
+                    <h2>Amenities</h2>
+                    <p>Find what's inside</p>
+                </div>
+            </div>
+            
+            <div class="feature-card" id="host-favorites">
+                <img src="assets/food.webp" 
+                     alt="Food" 
+                     width="130" 
+                     height="85"
+                     loading="lazy"
+                     decoding="async">
+                <div class="card-content">
+                    <h2>Food</h2>
+                    <p>Dine and unwind</p>
+                </div>
+            </div>
+            
+            <div class="feature-card" id="gallery-card">
+                <img src="assets/gallery.jpg" 
+                     alt="Property Gallery" 
+                     width="130" 
+                     height="85"
+                     loading="lazy"
+                     decoding="async">
+                <div class="card-content">
+                    <h2>Gallery</h2>
+                    <p>View property images</p>
+                </div>
+            </div>
+            
+            <div class="feature-card" id="rooms-card">
+                <img src="assets/events.jpg" 
+                     alt="Our Rooms" 
+                     width="130" 
+                     height="85"
+                     loading="lazy"
+                     decoding="async">
+                <div class="card-content">
+                    <h2>Events</h2>
+                    <p>Weddings, birthdays and more</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p class="quote">This house becomes more than bricks and mortar when it holds the laughter and memories of travelers like you.</p>
+            <div class="footer-buttons">
+                <button id="book-now-footer-btn">Book Now</button>
+                <button id="share-btn">Share property</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="book-now-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book Your Stay</h2>
+            <div class="booking-options">
+                <a href="https://wa.me/919319821414" target="_blank" class="booking-link whatsapp">
+                    <div class="booking-platform">
+                        <div class="platform-icon-wrapper whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="booking-platform-content">
+                            <h3>Chat on WhatsApp</h3>
+                            <p>Get quicker response</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://www.airbnb.co.in/rooms/792315810039415721" target="_blank" class="booking-link airbnb">
+                    <div class="booking-platform">
+                        <div class="platform-icon-wrapper airbnb">
+                            <i class="fab fa-airbnb"></i>
+                        </div>
+                        <div class="booking-platform-content">
+                            <h3>Book on Airbnb</h3>
+                            <p>View calendar & book instantly</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="nearby-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close">&times;</span>
+            <h2>Address</h2>
+            <div class="modal-sections">
+                <div class="modal-section">
+                    <div class="address-card">
+                        <div class="address-content">
+                            <h3>📍 Property Address</h3>
+                            <p>Stone Field Farms<br>Alipur, New Delhi 110036</p>
+                            <a href="https://www.google.com/maps/place/Stonefield+Farms+%7C+Farm+For+Rent+In+Delhi/@28.801551,77.1410987,17z/" 
+                               target="_blank" 
+                               class="map-button">
+                                <i class="fas fa-map-marker-alt"></i> Open in Google Maps
+                            </a>
+                        </div>
+                        <div class="location-preview">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3495.8831872907247!2d77.14109871507551!3d28.801550982353986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dab63c476be67%3A0x58b9cc6b55305a85!2sStonefield%20Farms%20%7C%20Farm%20For%20Rent%20In%20Delhi!5e0!3m2!1sen!2sin!4v1679904761695!5m2!1sen!2sin"
+                                width="100%" 
+                                height="250" 
+                                style="border:0; border-radius: 12px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🚗 How to Reach</h3>
+                    <ul class="transport-options">
+                        <li>
+                            <strong>From Delhi City:</strong> Take GT Karnal Road (NH-1) towards Alipur. The property is easily accessible and well-connected to major parts of Delhi.
+                        </li>
+                        <li>
+                            <strong>From Delhi Airport:</strong> Approximately 45 minutes drive via NH-48 and Outer Ring Road.
+                        </li>
+                        <li>
+                            <strong>Public Transport:</strong> Multiple bus routes available to Alipur. Auto-rickshaws and taxis readily available.
+                        </li>
+                        <li>
+                            <strong>Metro:</strong> Nearest metro station is Jahangirpuri (Yellow Line). Take an auto or cab from there to reach the property.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="emergency-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Emergency Contacts</h2>
+            <div class="modal-sections">
+                <div class="modal-section emergency">
+                    <div class="emergency-contacts">
+                        <div class="contact-item">
+                            <h4>Emergency Services</h4>
+                            <p>Police: 100</p>
+                            <p>Ambulance/Medical: 102, 108</p>
+                            <p>Fire: 101</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>Disaster Management</h4>
+                            <p>Control Room: 0177-2929688, 2629439</p>
+                            <p>2629939, 2628940</p>
+                            <p>Helpline: 1070, 1077</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>Other Helplines</h4>
+                            <p>Crime Stopper: 1090</p>
+                            <p>Women Helpline: 1091</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>Property Contacts</h4>
+                            <p>Host Contact (WhatsApp/Call): +91 95209 49831</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="name">Rakesh (Property Driver)</span>
+                            <a href="tel:+917906826718" class="phone">
+                                <i class="fas fa-phone"></i>
+                                7906826718
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <!-- WiFi Section -->
+            <div class="wifi-section">
+                <h2><i class="fas fa-wifi"></i> WiFi & House Rules</h2>
+                <div class="wifi-card">
+                    <div class="wifi-details">
+                        <div class="wifi-item">
+                            <span class="label">Network Name:</span>
+                            <span class="value">Stone Field Farms</span>
+                            <button class="copy-btn" data-copy="Stone Field Farms">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="wifi-item">
+                            <span class="label">Password:</span>
+                            <span class="value">welcome@2024</span>
+                            <button class="copy-btn" data-copy="welcome@2024">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- House Rules Section -->
+            <div class="rules-section">
+                <h2><i class="fas fa-scroll"></i> House Rules</h2>
+                <p class="rules-intro">You'll be staying in someone's home, so please treat it with care and respect.</p>
+                
+                <div class="rules-grid">
+                    <!-- Check-in & Check-out -->
+                    <div class="rule-category">
+                        <div class="rule-header">
+                            <i class="fas fa-clock"></i>
+                            <h3>Checking in and out</h3>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-sign-in-alt"></i> Check-in after 2:00 pm</li>
+                            <li><i class="fas fa-sign-out-alt"></i> Checkout before 11:00 am</li>
+                            <li><i class="fas fa-key"></i> Self check-in with lockbox</li>
+                        </ul>
+                    </div>
+
+                    <!-- During Stay Rules -->
+                    <div class="rule-category">
+                        <div class="rule-header">
+                            <i class="fas fa-home"></i>
+                            <h3>During your stay</h3>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-paw"></i> Pets allowed - Your furry friends are welcome to join your getaway</li>
+                            <li><i class="fas fa-camera"></i> No commercial photography - Personal memories only</li>
+                            <li><i class="fas fa-smoking"></i> Smoking allowed - Permitted in outdoor areas only</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cancellation Policy -->
+                    <div class="rule-category">
+                        <div class="rule-header">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Cancellation Policy</h3>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Full refund if cancelled 7 days before check-in</li>
+                            <li><i class="fas fa-times-circle"></i> No refund for cancellations within 7 days of check-in</li>
+                            <li><i class="fas fa-broom"></i> Cleaning fees are always refunded if cancelled before check-in</li>
+                        </ul>
+                        <p class="policy-note">In rare cases, you may be eligible for a refund under our Major Disruptive Events Policy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="specials-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close">&times;</span>
+            <h2>Things To Do</h2>
+            <!-- Content will be added later -->
+        </div>
+    </div>
+
+    <div id="reviews-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Guest Reviews</h2>
+            
+            <div class="review-platform-links">
+                <a href="https://www.google.com/maps/place/Stonefield+Farms+%7C+Farm+For+Rent+In+Delhi/@28.801551,77.1410987,17z/data=!4m8!3m7!1s0x390dab63c476be67:0x58b9cc6b55305a85!8m2!3d28.801551!4d77.143679!9m1!1b1!16s%2Fg%2F11ttb855zg" 
+                   target="_blank" 
+                   class="platform-button google">
+                    <i class="fab fa-google"></i>
+                    View All Reviews on Google
+                </a>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                        </div>
+                        <div class="reviewer-details">
+                            <h4>Jasmine Narang</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"I celebrated by 23rd birthday. The owner and staff was extremely polite and catered to all my last moment requirements. Highly recommended for parties. The aesthetics of the place were immaculate."</p>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                        </div>
+                        <div class="reviewer-details">
+                            <h4>Shweta Mutreja</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"I recently organized a bachelorette party for my cousin at this fantastic farmhouse, and I couldn't be more thrilled with the experience. From the moment we arrived, the rustic charm of the place set the perfect tone for the celebration. The spacious and well-decorated interiors provided a cozy atmosphere, creating a great backdrop for the festivities. The highlight was undoubtedly the outdoor area – a beautiful blend of nature and comfort. The sprawling lawn was ideal for games and activities, and the scenic views added a serene touch to the entire event. The well-maintained facilities, including clean restrooms and a fully equipped kitchen, contributed to the overall convenience."</p>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                        </div>
+                        <div class="reviewer-details">
+                            <h4>Noor K Ahuja</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"I have hosted and attended a few parties here. And i can undoubtedly say, the property is too good! It is such a pretty place and the in house decor is way too good to pass! The property owner suggests appropriate decor for your party and cooperates every smoothly! Any of my future parties, I am hosting them here itself!"</p>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                        </div>
+                        <div class="reviewer-details">
+                            <h4>Sunayna Jain</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"The property is new and well maintained by hosts. Offers an amazing experience in delhi for parties and group stays with friends and family. Opt for their pool during summers. The size is tad bit small but one can surely have a dip with a group of 10-15 people. Not meant for swimming. Breakfast option needs a major improvement. Kitchen is equipped and one can opt for server. Do carry your food and drinks as deliveries might take a long time to reach you. Loved the ambience and vibe of the place. Bedrooms and living room passed our expectation and variety of board games available to enjoy."</p>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                        </div>
+                        <div class="reviewer-details">
+                            <h4>Pawandeep Anand</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Everything about farm and host is amazing. Not just the property is really good, but the staff and host are extremely polite and welcoming. Overall, the farm is very well maintained and has all the necessities for a staycation."</p>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                        </div>
+                        <div class="reviewer-details">
+                            <h4>Dev Chabbra</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Stonefield is an ideal destination for all your get together & party needs. With great cleanliness & maintenance of the property, comes excellent hospitality from Mankirat Ji. Undoubtedly getting back to the place very soon."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Feedback</h2>
+            <form id="feedback-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="food-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Food & Dining</h2>
+            <!-- Content will be added later -->
+        </div>
+    </div>
+
+    <div id="amenities-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close">&times;</span>
+            <h2>Amenities</h2>
+
+            <!-- Add Property Overview section at the top -->
+            <div class="property-overview">
+                <h3><i class="fas fa-info-circle"></i> Property Overview</h3>
+                <div class="key-features">
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <span>Accommodates up to 15 guests</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bed"></i>
+                        <span>5 beds across 4 rooms (4 double beds + 1 queen sofa bed)</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bath"></i>
+                        <span>4 private bathrooms</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-couch"></i>
+                        <span>3 bedrooms + 1 living room with sofa bed</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-blanket"></i>
+                        <span>5 extra bedding provided within charges</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue with existing amenities categories -->
+            <div class="amenities-container">
+                <!-- Add new Highlights section -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-star"></i>
+                        <h3>Property Highlights</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-swimming-pool"></i>
+                            <span>Private swimming pool</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-glass-martini-alt"></i>
+                            <span>Outdoor bar area</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Bonfire area</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Fully equipped kitchen with crockery</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-music"></i>
+                            <span>Music system</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-concierge-bell"></i>
+                            <span>1 dedicated server</span>
+                        </div>
+                    </div>
+                    <p class="amenity-note">Note: Food and beverages are not included in this package</p>
+                </div>
+
+                <!-- Add Activities section -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-running"></i>
+                        <h3>Recreation Activities</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-table-tennis"></i>
+                            <span>Table tennis</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-shuttlecock"></i>
+                            <span>Badminton</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-futbol"></i>
+                            <span>Foosball</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bathroom & Hygiene -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-bath"></i>
+                        <h3>Bathroom & Hygiene</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-shower"></i>
+                            <span>Outdoor shower</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-hot-tub"></i>
+                            <span>Hot water</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-pump-soap"></i>
+                            <span>Body soap</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-broom"></i>
+                            <span>Cleaning products</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bedroom & Laundry -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-bed"></i>
+                        <h3>Bedroom & Laundry</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-box-open"></i>
+                            <span>Essentials (Towels, bed sheets, soap, toilet paper)</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Cotton bed linen</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Extra pillows and blankets</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-iron"></i>
+                            <span>Iron</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entertainment & Media -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-tv"></i>
+                        <h3>Entertainment</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-tv"></i>
+                            <span>TV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Climate Control -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-temperature-high"></i>
+                        <h3>Heating & Cooling</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-snowflake"></i>
+                            <span>Air conditioning</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-fan"></i>
+                            <span>Ceiling fan</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Portable heater</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety & Security -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Home Safety</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-video"></i>
+                            <span>Security cameras (exterior only)</span>
+                            <p class="security-note">Cameras in: Entrance, Main lawn, Sher area, Bonfire area, Parking area, Back lawn, Central outdoor area, Kitchen, Poolside area, TT Table area. No cameras in rooms or living areas.</p>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-fire-extinguisher"></i>
+                            <span>Fire extinguisher</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-first-aid"></i>
+                            <span>First aid kit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internet & Work -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-wifi"></i>
+                        <h3>Internet & Office</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>WiFi</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-laptop"></i>
+                            <span>Dedicated workspace</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kitchen & Dining -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Kitchen & Dining</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-kitchen-set"></i>
+                            <span>Full kitchen access</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-refrigerator"></i>
+                            <span>Refrigerator & Freezer</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-microwave"></i>
+                            <span>Microwave</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-blender"></i>
+                            <span>Cooking basics (Pots, pans, oil, salt, pepper)</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Dishes and cutlery</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-plug"></i>
+                            <span>Electric cooker</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Coffee maker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outdoor Features -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-tree"></i>
+                        <h3>Outdoor Amenities</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-door-open"></i>
+                            <span>Private entrance</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-tree"></i>
+                            <span>Private garden (fully fenced)</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-fire"></i>
+                            <span>Fire pit</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-chair"></i>
+                            <span>Outdoor furniture</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Outdoor dining area</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-drumstick-bite"></i>
+                            <span>BBQ grill</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parking & Facilities -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-parking"></i>
+                        <h3>Parking & Facilities</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-parking"></i>
+                            <span>Free on-premises parking</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-swimming-pool"></i>
+                            <span>Private pool</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Services -->
+                <div class="amenity-category">
+                    <div class="category-header">
+                        <i class="fas fa-concierge-bell"></i>
+                        <h3>Additional Services</h3>
+                    </div>
+                    <div class="amenity-items">
+                        <div class="amenity-item">
+                            <i class="fas fa-paw"></i>
+                            <span>Pets allowed</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-smoking"></i>
+                            <span>Smoking allowed</span>
+                        </div>
+                        <div class="amenity-item">
+                            <i class="fas fa-key"></i>
+                            <span>Self check-in with lockbox</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="events-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close">&times;</span>
+            <h2>Events & Celebrations</h2>
+            
+            <div class="events-intro">
+                <p>Create unforgettable memories at Stone Field Farms. Hosts upto 200 people, this is a perfect venue for birthdays, parties, weddings, family gatherings, corporate events, and more.</p>
+            </div>
+
+            <!-- Add Event Setup Options -->
+            <div class="event-setups">
+                <h3><i class="fas fa-star"></i> Available Event Setups</h3>
+                <div class="setup-grid">
+                    <div class="setup-item">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>Picnic</span>
+                    </div>
+                    <div class="setup-item">
+                        <i class="fas fa-coffee"></i>
+                        <span>High Tea Setup</span>
+                    </div>
+                    <div class="setup-item">
+                        <i class="fas fa-utensils"></i>
+                        <span>Brunch Setup</span>
+                    </div>
+                    <div class="setup-item">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <span>BBQ Setup</span>
+                    </div>
+                    <div class="setup-item">
+                        <i class="fas fa-campground"></i>
+                        <span>Camping Setup</span>
+                    </div>
+                    <div class="setup-item">
+                        <i class="fas fa-film"></i>
+                        <span>Movie Night/Screening</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rest of the events content -->
+            <div class="events-grid">
+                <!-- Images will be loaded dynamically via JavaScript -->
+            </div>
+
+            <div class="events-cta">
+                <p>Interested in hosting your event here?</p>
+                <button id="event-enquiry-btn" class="cta-button">
+                    <i class="fab fa-whatsapp"></i>
+                    Enquire Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close">&times;</span>
+            <h2>Photo Gallery</h2>
+
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="exterior">Exterior</button>
+                <button class="filter-btn" data-filter="interior">Interior</button>
+                <button class="filter-btn" data-filter="dining">Dining</button>
+                <button class="filter-btn" data-filter="bedroom">Bedrooms</button>
+                <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+            </div>
+
+            <!-- Property Images Grid -->
+            <div class="gallery-grid">
+                <!-- Exterior Views -->
+                <div class="gallery-item exterior">
+                    <img src="assets/gallery/property/exterior1.jpg" alt="Exterior View" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Exterior View</span>
+                    </div>
+                </div>
+                <div class="gallery-item exterior">
+                    <img src="assets/gallery/property/exterior2.jpg" alt="Exterior View" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Exterior View</span>
+                    </div>
+                </div>
+
+                <!-- Property Views -->
+                <div class="gallery-item exterior">
+                    <img src="assets/gallery/property/propertyview.jpg" alt="Property View" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Property Overview</span>
+                    </div>
+                </div>
+
+                <!-- Bedrooms -->
+                <div class="gallery-item bedroom">
+                    <img src="assets/gallery/property/bedroom1.jpg" alt="Bedroom" loading="lazy">
+                    <div class="gallery-overlay">
+                    </div>
+                </div>
+                <div class="gallery-item bedroom">
+                    <img src="assets/gallery/property/bedroom2.jpg" alt="Bedroom" loading="lazy">
+                    <div class="gallery-overlay">
+                    </div>
+                </div>
+                <div class="gallery-item bedroom">
+                    <img src="assets/gallery/property/bedroom3.jpg" alt="Bedroom" loading="lazy">
+                    <div class="gallery-overlay">
+                    </div>
+                </div>
+                <div class="gallery-item bedroom">
+                    <img src="assets/gallery/property/bedroom4.jpg" alt="Bedroom" loading="lazy">
+                    <div class="gallery-overlay">
+                    </div>
+                </div>
+                <div class="gallery-item bedroom">
+                    <img src="assets/gallery/property/bedroom5.jpg" alt="Bedroom" loading="lazy">
+                    <div class="gallery-overlay">
+                    </div>
+                </div>
+
+                <!-- Dining Area -->
+                <div class="gallery-item dining">
+                    <img src="assets/gallery/property/dining1.jpg" alt="Dining Area" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Outdoor Dining</span>
+                    </div>
+                </div>
+                <div class="gallery-item dining">
+                    <img src="assets/gallery/property/dining2.jpg" alt="Dining Area" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Outdoor Dining</span>
+                    </div>
+                </div>
+
+                <!-- Kitchen -->
+                <div class="gallery-item kitchen">
+                    <img src="assets/gallery/property/kitchen.jpg" alt="Kitchen" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Modern Kitchen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
