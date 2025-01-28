@@ -304,13 +304,13 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(initializeRoomGalleries, 100);
     });
 
-    // Add all 18 event images dynamically
+    // Add all 20 event images dynamically
     function loadEventImages() {
         const eventsGrid = document.querySelector('.events-grid');
         eventsGrid.innerHTML = ''; // Clear existing content
         
-        // Add all 18 images
-        for (let i = 1; i <= 18; i++) {
+        // Add all 20 images
+        for (let i = 1; i <= 20; i++) {
             const eventItem = document.createElement('div');
             eventItem.className = 'event-item';
             
@@ -327,16 +327,78 @@ document.addEventListener('DOMContentLoaded', function() {
     // Call this when the events modal is opened
     document.getElementById('rooms-card').addEventListener('click', loadEventImages);
 
-    // Gallery Filter Functionality
+    // Video optimization and handling
+    const videos = document.querySelectorAll('.gallery-item.video video');
+    
+    videos.forEach(video => {
+        const videoContainer = video.closest('.gallery-item');
+        
+        // Add loading state
+        video.addEventListener('loadstart', () => {
+            videoContainer.classList.add('loading');
+        });
+        
+        // Remove loading state
+        video.addEventListener('canplay', () => {
+            videoContainer.classList.remove('loading');
+        });
+
+        // Pause video when modal closes
+        document.querySelectorAll('.close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', () => {
+                video.pause();
+            });
+        });
+
+        // Pause video when clicking outside modal
+        window.addEventListener('click', (event) => {
+            if (event.target.classList.contains('modal')) {
+                video.pause();
+            }
+        });
+
+        // Handle video playback optimization
+        let playbackQuality = 'high';
+
+        // Check connection speed and adjust quality
+        if (navigator.connection) {
+            const connection = navigator.connection;
+            
+            if (connection.effectiveType === '4g' && !connection.saveData) {
+                playbackQuality = 'high';
+            } else {
+                playbackQuality = 'low';
+                video.setAttribute('playsinline', '');
+                video.setAttribute('preload', 'metadata');
+            }
+        }
+
+        // Optimize video playback based on device
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            video.setAttribute('playsinline', '');
+            video.setAttribute('preload', 'metadata');
+        }
+
+        // Handle video visibility
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(videoContainer);
+    });
+
+    // Update gallery filter to handle videos
     function initGalleryFilter() {
         const filterButtons = document.querySelectorAll('.filter-btn');
         const galleryItems = document.querySelectorAll('.gallery-item');
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Remove active class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
                 button.classList.add('active');
                 
                 const filterValue = button.getAttribute('data-filter');
@@ -344,11 +406,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 galleryItems.forEach(item => {
                     if (filterValue === 'all') {
                         item.style.display = 'block';
+                        // Pause all videos when switching filters
+                        if (item.classList.contains('video')) {
+                            const video = item.querySelector('video');
+                            if (video) video.pause();
+                        }
                     } else {
                         if (item.classList.contains(filterValue)) {
                             item.style.display = 'block';
                         } else {
                             item.style.display = 'none';
+                            // Pause hidden videos
+                            if (item.classList.contains('video')) {
+                                const video = item.querySelector('video');
+                                if (video) video.pause();
+                            }
                         }
                     }
                 });
@@ -365,4 +437,64 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('event-enquiry-btn').addEventListener('click', function() {
         window.open('https://wa.me/919319821414', '_blank');
     });
+
+    // Video optimization for event videos
+    const eventVideos = document.querySelectorAll('.event-video-item video');
+    
+    eventVideos.forEach(video => {
+        // Optimize video loading
+        video.setAttribute('playsinline', '');
+        video.setAttribute('preload', 'metadata');
+
+        // Pause video when not in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(video);
+
+        // Pause video when modal closes
+        document.querySelectorAll('.close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', () => {
+                video.pause();
+            });
+        });
+
+        // Handle mobile optimization
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            video.setAttribute('playsinline', '');
+            video.setAttribute('preload', 'metadata');
+        }
+
+        // Adjust quality based on connection
+        if (navigator.connection) {
+            const connection = navigator.connection;
+            if (connection.effectiveType !== '4g' || connection.saveData) {
+                // Lower quality for slower connections
+                video.setAttribute('data-quality', 'low');
+            }
+        }
+
+        // Clean up resources when video is not needed
+        window.addEventListener('scroll', () => {
+            if (!isElementInViewport(video)) {
+                video.pause();
+            }
+        }, { passive: true });
+    });
+
+    // Utility function to check if element is in viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 }); 

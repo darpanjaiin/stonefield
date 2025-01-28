@@ -1712,28 +1712,107 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Gallery Grid */
+/* Gallery Grid - Base styles */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 24px;
+    padding: 24px;
+    overflow: hidden;
 }
 
+/* Laptop-specific styles */
+@media screen and (min-width: 1024px) {
+    .modal-content.modal-large {
+        max-width: 1000px; /* Control modal width */
+        margin: 40px auto;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column */
+        max-width: 900px; /* Control content width */
+        margin: 0 auto;
+    }
+
+    .gallery-item {
+        aspect-ratio: 16/9;
+        height: auto;
+        max-height: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .gallery-item.video {
+        grid-column: 1; /* Ensure videos take full width */
+        aspect-ratio: 16/9;
+        height: 500px;
+    }
+
+    .gallery-item video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Filter buttons styling */
+    .gallery-filter {
+        padding: 24px;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+        border-radius: 25px;
+        background: #f8f9fa;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+        background: #e8e9ea;
+    }
+
+    .filter-btn.active {
+        background: #e67e22;
+        color: white;
+    }
+}
+
+/* Keep existing mobile styles unchanged */
+@media screen and (max-width: 1023px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    /* ... existing mobile styles ... */
+}
+
+/* Gallery Grid */
 .gallery-item {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     aspect-ratio: 3/2;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    background: #000;
+    width: 100%;
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    display: block;
 }
 
 .gallery-overlay {
@@ -2359,5 +2438,114 @@
 
     .rule-category li {
         font-size: 14px;
+    }
+}
+
+/* Update video styles */
+.gallery-item.video {
+    aspect-ratio: 16/9;
+    grid-column: span 2;
+    position: relative;
+    margin: 0;
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    max-height: 70vh;
+    background: #000;
+    display: block;
+}
+
+.gallery-item.video .gallery-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.gallery-item.video:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Video controls styling */
+.gallery-item video::-webkit-media-controls {
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    border-radius: 12px;
+}
+
+.gallery-item video::-webkit-media-controls-panel {
+    padding: 0 10px;
+}
+
+/* Responsive video */
+@media (max-width: 1024px) {
+    .gallery-item.video {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-item.video {
+        grid-column: 1 / -1;
+    }
+
+    .gallery-item video {
+        max-height: 50vh;
+    }
+}
+
+/* Clean up any potential floating elements */
+.gallery-item::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Add these styles for event videos */
+.event-videos {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.event-video-item {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.event-video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Video controls styling */
+.event-video-item video::-webkit-media-controls {
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.event-video-item video::-webkit-media-controls-panel {
+    padding: 0 10px;
+}
+
+/* Responsive styles for event videos */
+@media (max-width: 768px) {
+    .event-videos {
+        padding: 12px;
+        gap: 16px;
+    }
+
+    .event-video-item {
+        max-height: 300px;
     }
 }
